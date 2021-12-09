@@ -20,12 +20,12 @@ class CircleArray{
 
     //队列满
     public boolean isFull(){
-
+        return true;
     }
 
     //队列空
     public boolean isEmpty(){
-
+        return false;
     }
     //添加元素
 
