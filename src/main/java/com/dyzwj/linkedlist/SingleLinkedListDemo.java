@@ -23,9 +23,9 @@ public class SingleLinkedListDemo {
         singleLinkedList.add(node6);
         singleLinkedList.add(node7);
 
-        System.out.println(singleLinkedList.findK(5).getData());
-
-        singleLinkedList.show();
+//        System.out.println(singleLinkedList.findLastK(5).getData());
+        Node reverse = singleLinkedList.reverse(singleLinkedList.head);
+        singleLinkedList.show(reverse);
     }
 
 
@@ -67,6 +67,19 @@ class SingleLinkedList{
 
     }
 
+    //打印链表的数据
+    public void show(Node head){
+        Node temp = head;
+        while (true){
+            if(temp.next == null){
+                break;
+            }
+            temp = temp.next;
+            System.out.println(temp.getData());
+        }
+
+    }
+
     //添加的节点是有序的
 
     //合并两个有序链表  新建节点
@@ -78,9 +91,40 @@ class SingleLinkedList{
         return node;
     }
 
+    //单链表反转
+    public Node reverse(Node head){
+
+        Node prev = null;
+        Node curr = head;
+        while(curr != null){
+            Node temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+
+        return prev;
+        //当前节点
+//        Node cur = head;
+        //当前节点的下一个节点
+//        Node prev = head.next;
+//        head.next = null;
+//        while(prev != null && prev.next != null){
+//            Node temp = prev.next;
+//            prev.next = cur;
+//            cur = prev;
+//            prev = temp;
+//            if(prev.next == null){
+//                prev.next = cur;
+//                break;
+//            }
+//        }
+//        return prev;
+    }
+
 
     //查找单链表中的倒数第k个节点
-    public Node findK(int k){
+    public Node findLastK(int k){
         if(k < 0){
             throw new RuntimeException("非法的参数");
         }
