@@ -9,7 +9,6 @@ package com.dyzwj.leetcode;
  *     6 5 7
  *    4 1 8 3
  *
- *
  */
 
 public class Test1 {
@@ -27,7 +26,6 @@ public class Test1 {
         dp[0][0] = arr[0][0];
         for (int i = 1; i < arr.length; i++) {
             int[] ele = arr[i];
-
             for (int j = 0; j < ele.length; j++) {
                 if(j == 0){
                     dp[i][j] = dp[i-1][j] + arr[i][j];
