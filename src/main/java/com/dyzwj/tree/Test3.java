@@ -18,29 +18,29 @@ public class Test3 {
 
     public static void main(String[] args) {
 
-        Tree root = new Tree(1);
-        Tree tree1 = new Tree(2);
-        Tree tree2 = new Tree(3);
-        Tree tree3 = new Tree(4);
-        Tree tree4 = new Tree(5);
-        Tree tree5 = new Tree(6);
-        Tree tree6 = new Tree(7);
-        Tree tree7 = new Tree(8);
+        TreeNode root = new TreeNode(1);
+        TreeNode treeNode1 = new TreeNode(2);
+        TreeNode treeNode2 = new TreeNode(3);
+        TreeNode treeNode3 = new TreeNode(4);
+        TreeNode treeNode4 = new TreeNode(5);
+        TreeNode treeNode5 = new TreeNode(6);
+        TreeNode treeNode6 = new TreeNode(7);
+        TreeNode treeNode7 = new TreeNode(8);
 
 
-        root.left = tree1;
-        root.right = tree2;
-        tree1.left = tree3;
-        tree1.right = tree4;
-        tree2.left = tree5;
-        tree2.right = tree6;
-        tree6.left = tree7;
+        root.left = treeNode1;
+        root.right = treeNode2;
+        treeNode1.left = treeNode3;
+        treeNode1.right = treeNode4;
+        treeNode2.left = treeNode5;
+        treeNode2.right = treeNode6;
+        treeNode6.left = treeNode7;
         //队列
-        Queue<Tree> queue = new LinkedList<>();
-        Tree cur = root;
+        Queue<TreeNode> queue = new LinkedList<>();
+        TreeNode cur = root;
         queue.add(root);
         while (!queue.isEmpty()){
-            Tree poll = queue.poll();
+            TreeNode poll = queue.poll();
             System.out.print(poll.data + "    ");
             if(poll.left != null){
                 queue.add(poll.left);

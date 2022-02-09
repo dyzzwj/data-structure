@@ -12,20 +12,20 @@ import java.util.Queue;
 public class Test4 {
 
     public static void main(String[] args) {
-        System.out.println(width(Tree.init()));
+        System.out.println(width(TreeNode.init()));
     }
 
     //求二叉树的宽度
-    public static int width(Tree tree){
+    public static int width(TreeNode treeNode){
         int currentLevel = 1;
-        Map<Tree,Integer> map = new HashMap<>();
+        Map<TreeNode,Integer> map = new HashMap<>();
         int maxWidth = Integer.MIN_VALUE;
         int currentWidth = 0;
-        Queue<Tree> queue = new LinkedList<>();
-        queue.add(tree);
-        map.put(tree,currentLevel);
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(treeNode);
+        map.put(treeNode,currentLevel);
         while (!queue.isEmpty()){
-            Tree poll = queue.poll();
+            TreeNode poll = queue.poll();
 
             if(poll.left != null){
                 map.put(poll.left,map.get(poll) + 1);
