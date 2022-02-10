@@ -3,6 +3,9 @@ package com.dyzwj.graph;
 import java.util.HashMap;
 import java.util.HashSet;
 
+/**
+ * 图
+ */
 public class Graph {
 
 	//点集

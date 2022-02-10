@@ -1,6 +1,4 @@
-package com.dyzwj.treeNode;
-
-import com.dyzwj.tree.TreeNode;
+package com.dyzwj.tree;
 
 /**
  * 判断一棵树是否是搜索二叉树

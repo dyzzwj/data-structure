@@ -26,13 +26,17 @@ public class TreeNode<T> {
         TreeNode treeNode7 = new TreeNode(8);
 
 
+        TreeNode treeNode8 = new TreeNode(9);
+
         root.left = treeNode1;
         root.right = treeNode2;
-//        treeNode1.left = treeNode3;
+        treeNode1.left = treeNode3;
         treeNode1.right = treeNode4;
         treeNode2.left = treeNode5;
         treeNode2.right = treeNode6;
         treeNode6.left = treeNode7;
+        treeNode6.right = treeNode8;
+//        treeNode7.left = treeNode3;
         return root;
     }
 

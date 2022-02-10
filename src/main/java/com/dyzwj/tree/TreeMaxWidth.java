@@ -9,7 +9,7 @@ import java.util.Queue;
 /**
  * 二叉树的宽度优先遍历 求二叉树的宽度
  */
-public class Test4 {
+public class TreeMaxWidth {
 
     public static void main(String[] args) {
         System.out.println(width(TreeNode.init()));
