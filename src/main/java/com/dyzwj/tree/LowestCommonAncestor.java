@@ -15,7 +15,6 @@ public class LowestCommonAncestor {
         stack.push(root);
         while (!stack.isEmpty()){
 
-
         }
         return null;
     }
