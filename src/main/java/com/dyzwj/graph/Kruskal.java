@@ -3,6 +3,8 @@ package com.dyzwj.graph;
 import java.util.*;
 
 /**
+ *         最小生成树
+ *    kruskal算法 要求无向图
  *   此算法可以称为“加边法”，初始最小生成树边数为0，每迭代一次就选择一条满足条件的最小代价边，加入到最小生成树的边集合里。
  * 1. 把图中的所有边按代价从小到大排序；
  * 2. 把图中的n个顶点看成独立的n棵树组成的森林；
@@ -12,8 +14,6 @@ import java.util.*;
  *        并查集：判断from和to是否属于两颗不同的树
  */
 public class Kruskal {
-
-
     static class KruskalComparator implements Comparator<Edge>{
 
         @Override
@@ -22,9 +22,7 @@ public class Kruskal {
         }
     }
 
-
-
-    public static List<Edge> process(Graph graph){
+    public static List<Edge> kruskal(Graph graph){
         List<Edge> result = new ArrayList<>();
         UnionSet unionSet = new UnionSet(graph.nodes.values());
         PriorityQueue<Edge> queue = new PriorityQueue<>(new KruskalComparator());
@@ -44,7 +42,7 @@ public class Kruskal {
     }
 
 
-    //并查集
+    //并查集  判断from和to是否属于两颗不同的树
     static class UnionSet{
         //并查集
         Map<Node, List<Node>> set;
@@ -75,12 +73,14 @@ public class Kruskal {
 
     }
 
+    public static void main(String[] args) {
+        Integer[][] martix = new Integer[][]{
+                {2,1,2},{1,2,4},{4,1,3},{3,1,4},{5,3,5},{17,4,5}
+        };
 
+        kruskal(GraphGenerator.createGraph(martix,false)).forEach(System.out::println);
 
-
-
-
-
+    }
 
 }
 

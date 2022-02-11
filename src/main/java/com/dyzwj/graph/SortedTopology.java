@@ -18,7 +18,7 @@ public class SortedTopology {
                 {1,5,2},{2,2,3},{3,2,4},{4,3,4},{5,4,1}
         };
 
-        sortedTopology(GraphGenerator.createGraph(matrix)).forEach(System.out::println);
+        sortedTopology(GraphGenerator.createGraph(matrix,true)).forEach(System.out::println);
 
     }
 
