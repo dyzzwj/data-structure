@@ -15,7 +15,7 @@ public class 最长公共前缀 {
         String prefix = strs[0];
         for (int i = 0; i <strs.length; i++) {
 
-        }r
+        };
 
         return "";
     }
