@@ -37,6 +37,21 @@ public class Test1 {
         postOrder(root);
     }
 
+
+
+    //根左右
+    public static void order(TreeNode root){
+        if(root == null){
+            return;
+        }
+        //1 第一次来到当前节点
+        preOrder(root.left);
+        //2 第二次来到当前节点
+        preOrder(root.right);
+        //3 第三次来到当前节点
+
+    }
+
     //根左右
     public static void preOrder(TreeNode root){
         if(root == null){
