@@ -90,7 +90,7 @@ class Sorter {
 
     }
 
-    //i和j是一个位置的话 会出错
+    //异或的方式 i和j是一个位置的话 会出错
     private void swap(int[] arr, int i, int j) {
 //        arr[i] = arr[i] ^ arr[j];
 //        arr[j] = arr[i] ^ arr[j];

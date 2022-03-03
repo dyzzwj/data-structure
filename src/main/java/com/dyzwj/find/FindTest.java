@@ -1,16 +1,5 @@
 package com.dyzwj.find;
 
-public class FindTest {
-
-    public static void main(String[] args) {
-        int[] arr = new int[]{1,2,3,4,5,5,6,6,8,9};
-        Find find = new Find();
-        System.out.println(find.test3(arr,5));
-        System.out.println(find.test2(arr,5));
-    }
-
-}
-
 
 class Find{
 
