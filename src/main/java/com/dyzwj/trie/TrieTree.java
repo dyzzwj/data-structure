@@ -22,7 +22,9 @@ public class TrieTree {
     }
 
     static class TrieNode{
+        //经过当前节点的串
         int pass;
+        //以当前节点结尾的串
         int end;
         TrieNode[] nexts;
 
